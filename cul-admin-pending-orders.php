@@ -48,7 +48,12 @@
 		        	$pending_order_count += 1;
 		        }
 		    }
-		    echo  '<a href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id'.&action=edit">'.$subscription_id."</a>,".$pending_order_count."<br>";
+		    if($pending_order_count<=1){
+		    	echo  '<a style="background-color:#D64E07;color:#ffffff;"href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit">'.$subscription_id."</a>,".$pending_order_count."<br>";
+		    }
+		    else {
+		    	echo  '<a href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit">'.$subscription_id."</a>,".$pending_order_count."<br>";
+		    }
 		}
 		//get all pending orders
 			/*$args = array(
