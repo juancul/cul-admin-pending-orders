@@ -46,7 +46,7 @@
 		        if ( $order->has_status('pending') || $order->has_status('bad-payment') || $order->has_status('unreachable') || $order->has_status('late-payment') ) {
 		        	$pending_order_count += 1;
 		        }
-		      	echo  $subscription_id." ".$pending_order_count; 
+		      	echo  $subscription_id.",".$pending_order_count."<br>"; 
 		    }
 		}
 		//get all pending orders
