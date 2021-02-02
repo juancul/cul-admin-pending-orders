@@ -37,17 +37,18 @@
 
 			$relared_orders_ids_array = $subscription->get_related_orders();
 
-		    // count pending orders		    
+		    // count pending orders	
+		    $pending_order_count = 0;	    
 		    foreach ($relared_orders_ids_array as $order_id){
-		    	$pending_order_count = 0;
+		    	
 		        $order = wc_get_order( $order_id );
 		        //$order_status  = $order->get_status();
 
 		        if ( $order->has_status('pending') || $order->has_status('bad-payment') || $order->has_status('unreachable') || $order->has_status('late-payment') ) {
 		        	$pending_order_count += 1;
 		        }
-		      	echo  $subscription_id.",".$pending_order_count."<br>"; 
 		    }
+		    echo  $subscription_id.",".$pending_order_count."<br>";
 		}
 		//get all pending orders
 			/*$args = array(
