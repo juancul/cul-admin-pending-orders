@@ -48,7 +48,7 @@
 		        	$pending_order_count += 1;
 		        }
 		    }
-		    echo  $subscription_id.",".$pending_order_count."<br>";
+		    echo  '<a href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id'.&action=edit">'.$subscription_id."</a>,".$pending_order_count."<br>";
 		}
 		//get all pending orders
 			/*$args = array(
