@@ -45,7 +45,8 @@ ini_set('display_errors', 'on');
       		$email = $user_info->user_email;
 
 		    // count pending orders	
-		    $pending_order_count = 0;	    
+		    $pending_order_count = 0;
+		    echo  '<table>';	    
 		    foreach ($related_orders_ids_array as $order_id){
 		    	
 		        $order = wc_get_order( $order_id );
@@ -55,7 +56,7 @@ ini_set('display_errors', 'on');
 		        	$pending_order_count += 1;
 		        }
 		    }
-		    echo  '<table style="width:100%">';
+		    
 		    if($pending_order_count<=1){
 		    	echo  '<tr>
 		    				<td><a style="background-color:#D64E07;color:#ffffff;"href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id.'</a></td>
@@ -76,8 +77,8 @@ ini_set('display_errors', 'on');
 		    				<td>'.$email.'</td>
 		    			</tr>';
 		    }
-		    echo  '</table>';
 		}
+		echo  '</table>';
 		//get all pending orders
 			/*$args = array(
 	                'customer_id' => $wp_user_id,
