@@ -15,6 +15,8 @@
 	/**
 	 * Adds Menu to admin
 	 */
+	error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 
 	add_action( 'admin_menu', 'pending_admin_menu' );
 
@@ -35,7 +37,7 @@
 		foreach ($latePaymentSubs as $subscription_id) {
 			$subscription = wcs_get_subscription($subscription_id);
 
-			$relared_orders_ids_array = $subscription->get_related_orders();
+			$related_orders_ids_array = $subscription->get_related_orders();
 			$user_id = $value = get_post_meta( $subscription_id, '_customer_user', true );
 			$user_info = get_userdata($user_id);
 			$first_name = $user_info->first_name;
@@ -44,7 +46,7 @@
 
 		    // count pending orders	
 		    $pending_order_count = 0;	    
-		    foreach ($relared_orders_ids_array as $order_id){
+		    foreach ($related_orders_ids_array as $order_id){
 		    	
 		        $order = wc_get_order( $order_id );
 		        //$order_status  = $order->get_status();
