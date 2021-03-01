@@ -58,22 +58,22 @@ ini_set('display_errors', 'on');
 		    echo  '<table style="width:100%">';
 		    if($pending_order_count<=1){
 		    	echo  '<tr>
-		    				<th><a style="background-color:#D64E07;color:#ffffff;"href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id.'</a></th>
-		    				<th>'.$pending_order_count.'</th>
-		    				<th>'.get_post_status($subscription_id).'</th>
-		    				<th>'.$first_name.'</th>
-		    				<th>'.$last_name.'</th>
-		    				<th>'.$email.'</th>
+		    				<td><a style="background-color:#D64E07;color:#ffffff;"href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id.'</a></td>
+		    				<td>'.$pending_order_count.'</td>
+		    				<td>'.get_post_status($subscription_id).'</td>
+		    				<td>'.$first_name.'</td>
+		    				<td>'.$last_name.'</td>
+		    				<td>'.$email.'</td>
 		    			</tr>';  
 		    }
 		    else {
 		    	echo  '<tr>
-		    				<th><a href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id.'</a></th>
-		    				<th>'.$pending_order_count.'</th>
-		    				<th>'.get_post_status($subscription_id).'</th>
-		    				<th>'.$first_name.'</th>
-		    				<th>'.$last_name.'</th>
-		    				<th>'.$email.'</th>
+		    				<td><a href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id.'</a></td>
+		    				<td>'.$pending_order_count.'</td>
+		    				<td>'.get_post_status($subscription_id).'</td>
+		    				<td>'.$first_name.'</td>
+		    				<td>'.$last_name.'</td>
+		    				<td>'.$email.'</td>
 		    			</tr>';
 		    }
 		    echo  '</table>';
