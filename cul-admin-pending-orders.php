@@ -44,7 +44,13 @@
 
 		    // count pending orders	
 		    $pending_order_count = 0;
-		    echo  '<table>';	    
+		    echo  '<table>
+		    		<th>Alquiler</th>
+    				<th>Pagos Pendientes</th>
+    				<th>Estado</th>
+    				<th>Nombre</th>
+    				<th>Apellido</th>
+    				<th>Email</th>';	    
 		    foreach ($related_orders_ids_array as $order_id){
 		    	
 		        $order = wc_get_order( $order_id );
