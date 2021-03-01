@@ -40,7 +40,7 @@
 			$user_info = get_userdata($user_id);
 			$first_name = $user_info->first_name;
       		$last_name = $user_info->last_name;
-      		$email = $user_info->email;
+      		$email = $user_info->user_email;
 
 		    // count pending orders	
 		    $pending_order_count = 0;	    
@@ -54,10 +54,10 @@
 		        }
 		    }
 		    if($pending_order_count<=1){
-		    	echo  '<a style="background-color:#D64E07;color:#ffffff;"href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id."</a>,".$pending_order_count.",".get_post_status($subscription_id)." "$first_name." "$last_name." "$email."<br>";
+		    	echo  '<a style="background-color:#D64E07;color:#ffffff;"href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id."</a>,".$pending_order_count.",".get_post_status($subscription_id)." ".$first_name." ".$last_name." ".$email."<br>";
 		    }
 		    else {
-		    	echo  '<a href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id."</a>,".$pending_order_count.",".get_post_status($subscription_id)." "$first_name." "$last_name." "$email."<br>";
+		    	echo  '<a href="https://vivecul.com.co/wp-admin/post.php?post='.$subscription_id.'.&action=edit" target="_blank">'.$subscription_id."</a>,".$pending_order_count.",".get_post_status($subscription_id)." ".$first_name." ".$last_name." ".$email."<br>";
 		    }
 		}
 		//get all pending orders
