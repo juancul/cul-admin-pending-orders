@@ -15,8 +15,6 @@
 	/**
 	 * Adds Menu to admin
 	 */
-	error_reporting(E_ALL);
-ini_set('display_errors', 'on');
 
 	add_action( 'admin_menu', 'pending_admin_menu' );
 
